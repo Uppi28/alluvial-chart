@@ -20,7 +20,7 @@ var data = {"nodes":[
     {"name":"Price 18", "id":18},
     {"name":"Price 19", "id":19},
     ],"links":[
-        {"source":0,"target":10,"value":10, "endValue": 100},
+        {"source":0,"target":10,"value":100, "endValue": 10},
         {"source":1,"target":11,"value":90, "endValue": 94},
         {"source":2,"target":12,"value":80, "endValue": 80},
         {"source":3,"target":13,"value":30, "endValue": 30},

@@ -103,10 +103,12 @@ d3.alluvialGrowth = function() {
     // Compute the value (size) of each node by summing the associated links.
     function computeNodeValues() {
       nodes.forEach(function(node) {
-  
-        node.value = Math.max(d3.sum(node.sourceLinks, value),
-                              d3.sum(node.targetLinks, endValue),
-                              d3.sum(node.targetLinks, value));
+        console.log(node.targetLinks);
+        if(node.targetLinks.length === 0){
+          node.value = Math.max(d3.sum(node.sourceLinks, value), d3.sum(node.targetLinks, endValue), d3.sum(node.targetLinks, value));
+        } else {
+          node.value = d3.sum(node.targetLinks, endValue)
+        }
       });
     }
   
